@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktikum 9.4</title>
+</head>
+<body>
+    <input type="number" id="angka1" onchange="hitung()">
+    <br>
+    <p>+</p>
+    <input type="number" id="angka2" onchange="hitung()">
+    <br>
+    <p>=</p>
+    <span id="hasil"></span>
+
+    <script>
+        function hitung() {
+            var angka_satu = parseInt(document.getElementById("angka1").value);
+            var angka_dua = parseInt(document.getElementById("angka2").value);
+
+            document.getElementById("hasil").innerHTML = angka_satu + angka_dua;
+        }
+    </script>
+</body>
+</html>
