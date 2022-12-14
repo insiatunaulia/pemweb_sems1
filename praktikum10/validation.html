@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+</head>
+<body>
+    <form>
+        <p>
+            <label for="nama">Nama Pelanggan: </label>
+            <br>
+            <input type="text" id="nama" required>
+            <span id="tidakValid1" style="color: red;"></span>
+        </p>
+        <p>
+            <label for="email">Email: </label>
+            <br>
+            <input type="email" id="email" required>
+            <span id="tidakValid2" style="color: red;"></span>
+        </p>
+        <p>
+            <label for="jam">Jam Keberangkatan: </label>
+            <br>
+            <input type="time" id="jam" required>
+            <span id="tidakValid3" style="color: red;"></span>
+        </p>
+        <p>
+            <label for="tujuan">Tujuan Keberangkatan: </label>
+            <br>
+            <input type="text" id="tujuan" required>
+            <span id="tidakValid4" style="color: red;"></span>
+        </p>
+        <p>
+            <label for="tiket">Jumlah Tiket: </label>
+            <br>
+            <select id="tiket" required>
+                <option value="0">Pilih jumlah tiket</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+            <span id="tidakValid5" style="color: red;"></span>
+        </p>
+        
+        <button type="button" onclick="valid()">Submit</button>
+    </form>
+
+    <br><br>
+
+    <span id="hasilNama"></span>
+    <br>
+    <span id="hasilEmail"></span>
+    <br>
+    <span id="hasilJam"></span>
+    <br>
+    <span id="hasilTujuan"></span>
+    <br>
+    <span id="hasilTiket"></span>
+</body>
+
+<script>
+    function valid(){
+        let nama = document.getElementById('nama').value;
+        let email = document.getElementById('email').value
+        let jam = document.getElementById('jam').value
+        let tujuan = document.getElementById('tujuan').value
+        let tiket = document.getElementById('tiket').value
+
+        textError = "Data tidak valid"
+        if (nama == '' /jam == null || tujuan == '' || tiket == 0) {
+            document.getElementById("tidakValid1").innerHTML = textError
+            return false
+        }
+        else if (email == '') {
+            document.getElementById("tidakValid2").innerHTML = textError
+            document.getElementById("tidakValid1").innerHTML = ''
+            return false
+        }
+        else if (jam == '') {
+            document.getElementById("tidakValid3").innerHTML = textError
+            document.getElementById("tidakValid2").innerHTML = ''
+            return false
+        }
+        else if (tujuan == '') {
+            document.getElementById("tidakValid4").innerHTML = textError
+            document.getElementById("tidakValid3").innerHTML = ''
+            return false
+        }
+        else if (tiket == 0) {
+            document.getElementById("tidakValid5").innerHTML = textError
+            document.getElementById("tidakValid4").innerHTML = ''
+            return false
+        }
+        else {
+            document.getElementById("tidakValid5").innerHTML = ''
+        }
+        
+        document.getElementById('hasilNama').innerText = "Nama Pelanggan: " + nama.toUpperCase();
+        document.getElementById('hasilEmail').innerText = "Email: " + email;
+        document.getElementById('hasilJam').innerText = "Jam Keberangkatan: " + jam;
+        document.getElementById('hasilTujuan').innerText = "Tujuan Keberangkatan: " + tujuan.toUpperCase();
+        document.getElementById('hasilTiket').innerText = "Jumlah Tiket: " + tiket;
+    }
+</script>
+</html>
