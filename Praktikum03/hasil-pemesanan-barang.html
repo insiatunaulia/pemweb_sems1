@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasil Pemesanan Barang</title>
+    <style>
+        article{
+            float: right;
+            width: 60%;
+        }
+        aside{
+            float: left;
+            width: 40%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav align="center">
+            <a href="">Home</a> |
+            <a href="">Generate Link</a> |
+            <a href="">Transaction History</a> |
+            <a href="">Policy</a> |
+            <a href="">Logout</a> |
+        </nav>
+    </header>
+    <br><br>
+    <article>
+        <form>
+            <fieldset>
+                <table>
+                    <tr>
+                        <td>Title :</td>
+                        <td>iPhone 14</td>
+                    </tr>
+                    <tr>
+                        <td>Description :</td>
+                        <td>Year : 2022 <br>Condition : New</td>
+                    </tr>
+                    <tr>
+                        <td>Total Amoun :</td>
+                        <td>Rp. 14.000.000</td>
+                    </tr>
+                    <tr>
+                        <td>Pay to :</td>
+                        <td>123-456-789-0</td>
+                    </tr>
+                    <tr>
+                        <td>Payment type :</td>
+                        <td>
+                            <select id="bank">
+                                <option value="bri">BRI</option>
+                                <option value="mandiri">Mandiri</option>
+                                <option value="bca">BCA</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="account-holder">Account Holder :</label></td>
+                        <td><input type="text" id="account-holder"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="account-number">Account Number :</label></td>
+                        <td><input type="text" id="account-number"></td>
+                    </tr>
+                    <tr>
+                        <td align="right"><input type="checkbox" id="mobile-phone"></td>
+                        <td><label for="mobile-phone">Send to Mobile Phone</label></td>
+                    </tr>
+                    <tr>
+                        <td align="right"><input type="checkbox" id="email"></td>
+                        <td><label for="email">Email me copy of transaction</label></td>
+                    </tr>
+                    <tr>
+                        <td><label for="send-mobile-phone">Send to Mobile Phone</label></td>
+                        <td><input type="text" id="send-mobile-phone"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="">Send to Email</label></td>
+                        <td><input type="email"></td>
+                    </tr>
+                    <tr>
+                        <th colspan="2" align="right"><button type="submit" style="background-color: green">Pay using QuidLink</button></th>
+                    </tr>
+                </table>
+            </fieldset>
+        </form>
+    </article>
+    <aside>
+        <img src="iphone14.jpg" alt="">
+    </aside>
+</body>
+</html>
